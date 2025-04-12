@@ -1,0 +1,23 @@
+@import '@paulpladziewicz/design-tokens/build/_variables.scss';
+
+.text-input {
+  font-family: $text-fonts-sans;
+  font-size: $text-sizes-body;
+  color: $colors-black;
+  background-color: $colors-white;
+  border: 1px solid $colors-orange-300;
+  border-radius: $dimensions-1;
+  padding: $dimensions-2 $dimensions-3;
+  transition: border-color $transitions-durations-medium $transitions-easing-functions-accelerate;
+
+  &:focus {
+    border-color: $colors-orange-500;
+    outline: none;
+    box-shadow: 0 0 $dimensions-1 $colors-orange-100;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
