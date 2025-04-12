@@ -1,24 +1,24 @@
-@import '@paulpladziewicz/design-tokens/build/_variables.scss';
+@use '@paulpladziewicz/design-tokens/build/variables' as dt;
 
 .button {
-  font-family: $text-fonts-sans;
-  font-size: $text-sizes-body;
-  color: $colors-white;
-  background-color: $colors-orange-500;
-  border: 1px solid $colors-orange-700;
-  border-radius: $dimensions-1;
-  padding: $dimensions-3 $dimensions-4;
+  font-family: dt.$text-fonts-sans;
+  font-size: dt.$text-sizes-body;
+  color: dt.$colors-white;
+  background-color: dt.$colors-orange-500;
+  border: 1px solid dt.$colors-orange-700;
+  border-radius: dt.$dimensions-1;
+  padding: dt.$dimensions-3 dt.$dimensions-4;
   cursor: pointer;
-  transition: background-color $transitions-durations-medium $transitions-easing-functions-accelerate,
-  border-color $transitions-durations-medium $transitions-easing-functions-accelerate;
+  transition: background-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate,
+  border-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate;
 
   &:hover:not(:disabled) {
-    background-color: $colors-orange-600;
-    border-color: $colors-orange-800;
+    background-color: dt.$colors-orange-600;
+    border-color: dt.$colors-orange-800;
   }
 
   &:active:not(:disabled) {
-    background-color: $colors-orange-700;
+    background-color: dt.$colors-orange-700;
   }
 
   &:disabled {
