@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'lib-button',
-  imports: [],
+  selector: 'ngx-button',
   templateUrl: './button.component.html',
-  styleUrl: './button.component.css'
+  styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
+  @Input() label: string = 'Button';
+  @Input() disabled: boolean = false;
+  @Input({ required: true }) type: string = 'button';
+  @Output() buttonClick = new EventEmitter<Event>();
 
+  onClick(event: Event): void {
+    if (!this.disabled) {
+      this.buttonClick.emit(event);
+    }
+  }
 }
