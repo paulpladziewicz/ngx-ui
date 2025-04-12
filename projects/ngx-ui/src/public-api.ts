@@ -2,5 +2,5 @@
  * Public API Surface of ngx-ui
  */
 
-export * from './lib/ngx-ui.service';
-export * from './lib/ngx-ui.component';
+export { ButtonComponent } from './lib/button/button.component';
+export { TextInputComponent } from './lib/text-input/text-input.component';
