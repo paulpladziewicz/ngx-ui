@@ -1,7 +1,9 @@
 <button
   class="button"
-  [disabled]="disabled"
+  (click)="onClick($event)"
   [type]="type"
-  (click)="onClick($event)">
-  {{ label }}
+  [disabled]="disabled"
+  [attr.aria-disabled]="disabled"
+>
+  <ng-content></ng-content>
 </button>
