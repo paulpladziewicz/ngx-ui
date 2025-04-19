@@ -28,10 +28,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "tsConfig": "projects/ngx-ui/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
+            "polyfills": ["zone.js", "zone.js/testing"]
           }
         },
         "storybook": {
@@ -40,12 +37,7 @@
             "configDir": "projects/ngx-ui/.storybook",
             "browserTarget": "ngx-ui:build",
             "compodoc": true,
-            "compodocArgs": [
-              "-e",
-              "json",
-              "-d",
-              "projects/ngx-ui"
-            ],
+            "compodocArgs": ["-e", "json", "-d", "projects/ngx-ui"],
             "port": 6006
           }
         },
@@ -55,12 +47,7 @@
             "configDir": "projects/ngx-ui/.storybook",
             "browserTarget": "ngx-ui:build",
             "compodoc": true,
-            "compodocArgs": [
-              "-e",
-              "json",
-              "-d",
-              "projects/ngx-ui"
-            ],
+            "compodocArgs": ["-e", "json", "-d", "projects/ngx-ui"],
             "outputDir": "storybook-static"
           }
         }

@@ -1,26 +1,33 @@
-import {Component, Input, Output, EventEmitter, forwardRef, ChangeDetectionStrategy} from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  forwardRef,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule, NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import {
+  FormsModule,
+  ReactiveFormsModule,
+  NG_VALUE_ACCESSOR,
+  ControlValueAccessor,
+} from '@angular/forms';
 
 @Component({
   selector: 'ngx-text-input',
-  imports: [
-    InputComponent,
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
+  imports: [InputComponent, CommonModule, FormsModule, ReactiveFormsModule],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => TextInputComponent),
-      multi: true
-    }
+      multi: true,
+    },
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss']
+  styleUrls: ['./text-input.component.scss'],
 })
 export class TextInputComponent implements ControlValueAccessor {
   private static nextId = 0;
@@ -37,7 +44,7 @@ export class TextInputComponent implements ControlValueAccessor {
 
   set value(v: string) {
     if (v !== this._value) {
-      this._value = v;    // ← assign here
+      this._value = v; // ← assign here
       this.onChange(v);
       this.valueChange.emit(v);
     }
@@ -63,4 +70,3 @@ export class TextInputComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 }
-

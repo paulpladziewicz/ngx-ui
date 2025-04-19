@@ -9,8 +9,9 @@
   border-radius: dt.$dimensions-1;
   padding: dt.$dimensions-3 dt.$dimensions-4;
   cursor: pointer;
-  transition: background-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate,
-  border-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate;
+  transition:
+    background-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate,
+    border-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate;
 
   &:hover:not(:disabled) {
     background-color: dt.$colors-orange-600;

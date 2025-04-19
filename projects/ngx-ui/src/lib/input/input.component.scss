@@ -8,7 +8,8 @@
   border: 1px solid dt.$colors-orange-300;
   border-radius: dt.$dimensions-1;
   padding: dt.$dimensions-2 dt.$dimensions-3;
-  transition: border-color dt.$transitions-durations-medium dt.$transitions-easing-functions-accelerate;
+  transition: border-color dt.$transitions-durations-medium
+    dt.$transitions-easing-functions-accelerate;
 
   &:focus {
     border-color: dt.$colors-orange-500;

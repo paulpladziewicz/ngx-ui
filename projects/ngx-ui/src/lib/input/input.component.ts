@@ -4,23 +4,19 @@ import {
   Output,
   EventEmitter,
   forwardRef,
-  ChangeDetectionStrategy
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   ControlValueAccessor,
   NG_VALUE_ACCESSOR,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
 } from '@angular/forms';
 
 @Component({
   selector: 'ngx-input',
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -28,20 +24,21 @@ import {
     {
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => InputComponent),
-      multi: true
-    }
-  ]
+      multi: true,
+    },
+  ],
 })
 export class InputComponent implements ControlValueAccessor {
   @Input() id = '';
   @Input() placeholder = 'Enter text';
   @Input() disabled = false;
   @Output() valueChange = new EventEmitter<string>();
-
   private _value = '';
+
   get value(): string {
     return this._value;
   }
+
   @Input()
   set value(v: string) {
     if (v !== this._value) {
@@ -58,12 +55,15 @@ export class InputComponent implements ControlValueAccessor {
   writeValue(v: string): void {
     this._value = v ?? '';
   }
+
   registerOnChange(fn: any): void {
     this.onChange = fn;
   }
+
   registerOnTouched(fn: any): void {
     this.onTouched = fn;
   }
+
   setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }

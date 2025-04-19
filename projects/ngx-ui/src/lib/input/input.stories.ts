@@ -1,14 +1,14 @@
-import type {Meta, StoryObj} from '@storybook/angular';
-import {InputComponent} from './input.component';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { InputComponent } from './input.component';
 
 const meta: Meta<InputComponent> = {
   title: 'Input',
   component: InputComponent,
   argTypes: {
-    value: {control: 'text'},
-    placeholder: {control: 'text'},
-    disabled: {control: 'boolean'},
-    valueChange: {action: 'valueChange'},
+    value: { control: 'text' },
+    placeholder: { control: 'text' },
+    disabled: { control: 'boolean' },
+    valueChange: { action: 'valueChange' },
   },
 };
 

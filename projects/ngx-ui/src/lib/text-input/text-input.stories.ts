@@ -1,23 +1,23 @@
-import type {Meta, StoryObj} from '@storybook/angular';
-import {TextInputComponent} from './text-input.component';
+import type { Meta, StoryObj } from '@storybook/angular';
+import { TextInputComponent } from './text-input.component';
 
 const meta: Meta<TextInputComponent> = {
   title: 'TextInput',
   component: TextInputComponent,
   argTypes: {
-    label: {control: 'text'},
-    value: {control: 'text'},
-    placeholder: {control: 'text'},
-    disabled: {control: 'boolean'},
-    valueChange: {action: 'valueChange'},
+    label: { control: 'text' },
+    value: { control: 'text' },
+    placeholder: { control: 'text' },
+    disabled: { control: 'boolean' },
+    valueChange: { action: 'valueChange' },
   },
 };
 
 export default meta;
 type Story = StoryObj<TextInputComponent>;
 
-const render: Story['render'] = (args, {valueChange}) => ({
-  props: {...args, valueChange},
+const render: Story['render'] = (args, { valueChange }) => ({
+  props: { ...args, valueChange },
   template: `
     <ngx-text-input
       [label]="label"
