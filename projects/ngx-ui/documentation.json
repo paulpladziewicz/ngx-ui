@@ -14,26 +14,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Click Me',\n    disabled: false,\n    type: 'button',\n  },\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    value: '',\n    placeholder: 'Enter text',\n    disabled: false,\n  },\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/ngx-ui/src/lib/text-input/text-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -41,24 +21,24 @@
                 "defaultValue": "{\n  args: {\n    label: 'Label',\n    value: '',\n    placeholder: 'Enter text',\n    disabled: false,\n  },\n}"
             },
             {
-                "name": "Disabled",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Disabled',\n    disabled: true,\n    type: 'button',\n  },\n}"
-            },
-            {
-                "name": "Disabled",
+                "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    value: '',\n    placeholder: 'Disabled input',\n    disabled: true,\n  },\n}"
+                "defaultValue": "{\n  render,\n  args: {\n    value:       '',\n    placeholder: 'Enter text',\n    disabled:    false,\n  },\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: renderWithContent,   // Storybook will call it as (args, context)\n  args: {\n    content: 'Click Me',\n    disabled: false,\n    type: 'button',\n  }\n}"
             },
             {
                 "name": "Disabled",
@@ -71,24 +51,24 @@
                 "defaultValue": "{\n  args: {\n    label: 'Label',\n    value: '',\n    placeholder: 'Disabled input',\n    disabled: true,\n  },\n}"
             },
             {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<ButtonComponent>",
-                "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  argTypes: {\n    label: { control: 'text' },\n    disabled: { control: 'boolean' },\n    type: { control: 'text' },\n    buttonClick: { action: 'buttonClick' },\n  },\n}"
-            },
-            {
-                "name": "meta",
+                "name": "Disabled",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<InputComponent>",
-                "defaultValue": "{\n  title: 'Input',\n  component: InputComponent,\n  argTypes: {\n    value: { control: 'text' },\n    placeholder: { control: 'text' },\n    disabled: { control: 'boolean' },\n    valueChange: { action: 'valueChange' },\n  },\n}"
+                "type": "Story",
+                "defaultValue": "{\n  render,\n  args: {\n    value:       '',\n    placeholder: 'Disabled input',\n    disabled:    true,\n  },\n}"
+            },
+            {
+                "name": "Disabled",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render: renderWithContent,\n  args: {\n    content: 'Disabled',\n    disabled: true,\n    type: 'button',\n  }\n}"
             },
             {
                 "name": "meta",
@@ -101,6 +81,26 @@
                 "defaultValue": "{\n  title: 'TextInput',\n  component: TextInputComponent,\n  argTypes: {\n    value: { control: 'text' },\n    placeholder: { control: 'text' },\n    disabled: { control: 'boolean' },\n    valueChange: { action: 'valueChange' },\n  },\n}"
             },
             {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<InputComponent>",
+                "defaultValue": "{\n  title: 'Input',\n  component: InputComponent,\n  argTypes: {\n    value:       { control: 'text' },\n    placeholder: { control: 'text' },\n    disabled:    { control: 'boolean' },\n    valueChange: { action: 'valueChange' },\n  },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ButtonStory>",
+                "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  argTypes: {\n    content:    { control: 'text' },\n    disabled:   { control: 'boolean' },\n    type:       { control: 'radio', options: ['button','submit','reset'] },\n    buttonClick:{ action: 'buttonClick' },\n  },\n}"
+            },
+            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -111,6 +111,26 @@
                 "defaultValue": "{\n  parameters: {\n    controls: {\n      matchers: {\n       color: /(background|color)$/i,\n       date: /Date$/i,\n      },\n    },\n  },\n}"
             },
             {
+                "name": "render",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args, context) => ({\n  props: args,\n  template: `\n    <ngx-input\n      [value]=\"value\"\n      [placeholder]=\"placeholder\"\n      [disabled]=\"disabled\"\n      (valueChange)=\"valueChange($event)\"\n    ></ngx-input>\n  `,\n})"
+            },
+            {
+                "name": "renderWithContent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(args, context) => ({\n    props: args,\n    template: `\n      <ngx-button\n        [type]=\"type\"\n        [disabled]=\"disabled\"\n        (buttonClick)=\"buttonClick($event)\"\n      >{{ content }}</ngx-button>\n    `\n  })"
+            },
+            {
                 "name": "Submit",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -118,17 +138,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\n  args: {\n    label: 'Submit',\n    disabled: false,\n    type: 'submit',\n  },\n}"
-            },
-            {
-                "name": "WithValue",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\n  args: {\n    value: 'Initial value',\n    placeholder: 'Enter text here...',\n    disabled: false,\n  },\n}"
+                "defaultValue": "{\n  render: renderWithContent,\n  args: {\n    content: 'Submit',\n    disabled: false,\n    type: 'submit',\n  }\n}"
             },
             {
                 "name": "WithValue",
@@ -139,16 +149,37 @@
                 "deprecationMessage": "",
                 "type": "Story",
                 "defaultValue": "{\n  args: {\n    label: 'Label',\n    value: 'Initial value',\n    placeholder: 'Enter text here...',\n    disabled: false,\n  },\n}"
+            },
+            {
+                "name": "WithValue",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n  render,\n  args: {\n    value:       'Initial value',\n    placeholder: 'Enter text here...',\n    disabled:    false,\n  },\n}"
             }
         ],
         "functions": [],
         "typealiases": [
             {
+                "name": "ButtonStory",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "",
+                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 193
+            },
+            {
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<ButtonComponent>",
-                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "rawtype": "StoryObj<TextInputComponent>",
+                "file": "projects/ngx-ui/src/lib/text-input/text-input.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -169,8 +200,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<TextInputComponent>",
-                "file": "projects/ngx-ui/src/lib/text-input/text-input.stories.ts",
+                "rawtype": "StoryObj<ButtonStory>",
+                "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -179,90 +210,6 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "projects/ngx-ui/src/lib/button/button.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Click Me',\n    disabled: false,\n    type: 'button',\n  },\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Disabled',\n    disabled: true,\n    type: 'button',\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<ButtonComponent>",
-                    "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  argTypes: {\n    label: { control: 'text' },\n    disabled: { control: 'boolean' },\n    type: { control: 'text' },\n    buttonClick: { action: 'buttonClick' },\n  },\n}"
-                },
-                {
-                    "name": "Submit",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    label: 'Submit',\n    disabled: false,\n    type: 'submit',\n  },\n}"
-                }
-            ],
-            "projects/ngx-ui/src/lib/input/input.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    value: '',\n    placeholder: 'Enter text',\n    disabled: false,\n  },\n}"
-                },
-                {
-                    "name": "Disabled",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    value: '',\n    placeholder: 'Disabled input',\n    disabled: true,\n  },\n}"
-                },
-                {
-                    "name": "meta",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Meta<InputComponent>",
-                    "defaultValue": "{\n  title: 'Input',\n  component: InputComponent,\n  argTypes: {\n    value: { control: 'text' },\n    placeholder: { control: 'text' },\n    disabled: { control: 'boolean' },\n    valueChange: { action: 'valueChange' },\n  },\n}"
-                },
-                {
-                    "name": "WithValue",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\n  args: {\n    value: 'Initial value',\n    placeholder: 'Enter text here...',\n    disabled: false,\n  },\n}"
-                }
-            ],
             "projects/ngx-ui/src/lib/text-input/text-input.stories.ts": [
                 {
                     "name": "Default",
@@ -305,6 +252,110 @@
                     "defaultValue": "{\n  args: {\n    label: 'Label',\n    value: 'Initial value',\n    placeholder: 'Enter text here...',\n    disabled: false,\n  },\n}"
                 }
             ],
+            "projects/ngx-ui/src/lib/input/input.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render,\n  args: {\n    value:       '',\n    placeholder: 'Enter text',\n    disabled:    false,\n  },\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render,\n  args: {\n    value:       '',\n    placeholder: 'Disabled input',\n    disabled:    true,\n  },\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<InputComponent>",
+                    "defaultValue": "{\n  title: 'Input',\n  component: InputComponent,\n  argTypes: {\n    value:       { control: 'text' },\n    placeholder: { control: 'text' },\n    disabled:    { control: 'boolean' },\n    valueChange: { action: 'valueChange' },\n  },\n}"
+                },
+                {
+                    "name": "render",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args, context) => ({\n  props: args,\n  template: `\n    <ngx-input\n      [value]=\"value\"\n      [placeholder]=\"placeholder\"\n      [disabled]=\"disabled\"\n      (valueChange)=\"valueChange($event)\"\n    ></ngx-input>\n  `,\n})"
+                },
+                {
+                    "name": "WithValue",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render,\n  args: {\n    value:       'Initial value',\n    placeholder: 'Enter text here...',\n    disabled:    false,\n  },\n}"
+                }
+            ],
+            "projects/ngx-ui/src/lib/button/button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: renderWithContent,   // Storybook will call it as (args, context)\n  args: {\n    content: 'Click Me',\n    disabled: false,\n    type: 'button',\n  }\n}"
+                },
+                {
+                    "name": "Disabled",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: renderWithContent,\n  args: {\n    content: 'Disabled',\n    disabled: true,\n    type: 'button',\n  }\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ButtonStory>",
+                    "defaultValue": "{\n  title: 'Button',\n  component: ButtonComponent,\n  argTypes: {\n    content:    { control: 'text' },\n    disabled:   { control: 'boolean' },\n    type:       { control: 'radio', options: ['button','submit','reset'] },\n    buttonClick:{ action: 'buttonClick' },\n  },\n}"
+                },
+                {
+                    "name": "renderWithContent",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(args, context) => ({\n    props: args,\n    template: `\n      <ngx-button\n        [type]=\"type\"\n        [disabled]=\"disabled\"\n        (buttonClick)=\"buttonClick($event)\"\n      >{{ content }}</ngx-button>\n    `\n  })"
+                },
+                {
+                    "name": "Submit",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n  render: renderWithContent,\n  args: {\n    content: 'Submit',\n    disabled: false,\n    type: 'submit',\n  }\n}"
+                }
+            ],
             "projects/ngx-ui/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -323,24 +374,22 @@
         "groupedTypeAliases": {
             "projects/ngx-ui/src/lib/button/button.stories.ts": [
                 {
-                    "name": "Story",
+                    "name": "ButtonStory",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<ButtonComponent>",
+                    "rawtype": "",
                     "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/ngx-ui/src/lib/input/input.stories.ts": [
+                    "kind": 193
+                },
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<InputComponent>",
-                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                    "rawtype": "StoryObj<ButtonStory>",
+                    "file": "projects/ngx-ui/src/lib/button/button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -354,6 +403,19 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<TextInputComponent>",
                     "file": "projects/ngx-ui/src/lib/text-input/text-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/ngx-ui/src/lib/input/input.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<InputComponent>",
+                    "file": "projects/ngx-ui/src/lib/input/input.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -412,7 +474,27 @@
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
+                "name": "renderWithContent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
                 "name": "Submit",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ui/src/lib/button/button.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "ButtonStory",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -453,6 +535,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/ngx-ui/src/lib/input/input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "render",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
