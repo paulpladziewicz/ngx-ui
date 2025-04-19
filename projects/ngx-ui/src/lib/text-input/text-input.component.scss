@@ -1,8 +1,12 @@
-@use '@paulpladziewicz/design-tokens/build/variables' as dt;
+@use '@paulpladziewicz/design-tokens/build/_variables.scss' as dt;
 
 .form-control {
   display: flex;
   flex-direction: column;
+
+  label {
+    margin-bottom: dt.$dimensions-1;
+  }
 }
 
 .text-input {
