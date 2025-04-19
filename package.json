@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test --browsers=ChromeHeadless",
     "storybook": "ng run ngx-ui:storybook",
-    "build-storybook": "ng run ngx-ui:build-storybook"
+    "build-storybook": "ng run ngx-ui:build-storybook",
+    "format": "prettier --write \"**/*.{js,ts,html,scss,css,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,ts,html,scss,css,json,md}\""
   },
   "private": true,
   "dependencies": {
@@ -45,6 +47,7 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^19.2.0",
+    "prettier": "^3.2.5",
     "storybook": "^8.6.12",
     "typescript": "~5.7.2"
   }

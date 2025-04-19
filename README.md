@@ -19,3 +19,27 @@ Angular CLI includes powerful code scaffolding tools. To generate a new componen
 ```bash
 ng generate component <component-name> --project=ngx-ui --export
 ```
+
+## Code Formatting
+
+This project uses [Prettier](https://prettier.io/) for code formatting. Prettier is an opinionated code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules.
+
+### Format your code
+
+To format all files in the project, run:
+
+```bash
+npm run format
+```
+
+### Check formatting
+
+To check if your files are properly formatted without making changes, run:
+
+```bash
+npm run format:check
+```
+
+### Configuration
+
+Prettier configuration is defined in the `.prettierrc` file at the root of the project. Files and directories excluded from formatting are specified in the `.prettierignore` file.
