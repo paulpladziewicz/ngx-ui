@@ -1,6 +1,6 @@
 {
   "name": "ngx-ui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +10,8 @@
     "storybook": "ng run ngx-ui:storybook",
     "build-storybook": "ng run ngx-ui:build-storybook",
     "format": "prettier --write \"**/*.{js,ts,html,scss,css,json,md}\"",
-    "format:check": "prettier --check \"**/*.{js,ts,html,scss,css,json,md}\""
+    "format:check": "prettier --check \"**/*.{js,ts,html,scss,css,json,md}\"",
+    "publish": "ng build && cd dist/ngx-ui && npm publish --access public"
   },
   "private": true,
   "dependencies": {
