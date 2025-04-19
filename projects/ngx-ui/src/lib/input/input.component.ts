@@ -1,20 +1,70 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  forwardRef,
+  ChangeDetectionStrategy
+} from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {
+  ControlValueAccessor,
+  NG_VALUE_ACCESSOR,
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 
 @Component({
   selector: 'ngx-input',
-  imports: [],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.scss'
+  styleUrls: ['./input.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => InputComponent),
+      multi: true
+    }
+  ]
 })
-export class InputComponent {
-  @Input() value: string = '';
-  @Input() placeholder: string = 'Enter text';
-  @Input() disabled: boolean = false;
+export class InputComponent implements ControlValueAccessor {
+  @Input() id = '';
+  @Input() placeholder = 'Enter text';
+  @Input() disabled = false;
   @Output() valueChange = new EventEmitter<string>();
 
-  onInputChange(event: Event): void {
-    const target = event.target as HTMLInputElement;
-    this.value = target.value;
-    this.valueChange.emit(this.value);
+  private _value = '';
+  get value(): string {
+    return this._value;
+  }
+  @Input()
+  set value(v: string) {
+    if (v !== this._value) {
+      this._value = v;
+      this.onChange(v);
+      this.valueChange.emit(v);
+    }
+  }
+
+  private onChange: (v: string) => void = () => {};
+
+  private onTouched: () => void = () => {};
+
+  writeValue(v: string): void {
+    this._value = v ?? '';
+  }
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
+  setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
   }
 }

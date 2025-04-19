@@ -1,9 +1,11 @@
 <div class="form-control">
-  <label>{{label}}</label>
+  <label [for]="id">{{label}}</label>
   <ngx-input
+    [id]="id"
     [value]="value"
     [placeholder]="placeholder"
     [disabled]="disabled"
-    (input)="onInputChange($event)"
+    (valueChange)="value = $event"
+    (blur)="onTouched()"
   />
 </div>
