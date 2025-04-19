@@ -1,8 +1,14 @@
-<input
-  type="text"
-  [value]="value"
-  [placeholder]="placeholder"
-  [disabled]="disabled"
-  (input)="onInputChange($event)"
-  class="text-input"
-/>
+<div class="form-control">
+  <label>{{label}}</label>
+  <ngx-input>
+
+  </ngx-input>
+  <input
+    type="text"
+    [value]="value"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    (input)="onInputChange($event)"
+    class="input"
+  />
+</div>

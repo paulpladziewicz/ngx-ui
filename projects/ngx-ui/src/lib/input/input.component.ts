@@ -1,16 +1,12 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { InputComponent } from '../input/input.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'ngx-text-input',
-  imports: [
-    InputComponent
-  ],
-  templateUrl: './text-input.component.html',
-  styleUrls: ['./text-input.component.scss']
+  selector: 'ngx-input',
+  imports: [],
+  templateUrl: './input.component.html',
+  styleUrl: './input.component.scss'
 })
-export class TextInputComponent {
-  @Input() label: string = '';
+export class InputComponent {
   @Input() value: string = '';
   @Input() placeholder: string = 'Enter text';
   @Input() disabled: boolean = false;
@@ -22,4 +18,3 @@ export class TextInputComponent {
     this.valueChange.emit(this.value);
   }
 }
-

@@ -1,10 +1,5 @@
 @use '@paulpladziewicz/design-tokens/build/variables' as dt;
 
-.form-control {
-  display: flex;
-  flex-direction: column;
-}
-
 .text-input {
   font-family: dt.$text-fonts-sans;
   font-size: dt.$text-sizes-body;

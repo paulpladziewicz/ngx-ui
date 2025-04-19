@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { TextInputComponent } from './text-input.component';
+import { InputComponent } from './input.component';
 
-const meta: Meta<TextInputComponent> = {
-  title: 'TextInput',
-  component: TextInputComponent,
+const meta: Meta<InputComponent> = {
+  title: 'Input',
+  component: InputComponent,
   argTypes: {
     value: { control: 'text' },
     placeholder: { control: 'text' },
@@ -14,11 +14,10 @@ const meta: Meta<TextInputComponent> = {
 
 export default meta;
 
-type Story = StoryObj<TextInputComponent>;
+type Story = StoryObj<InputComponent>;
 
 export const Default: Story = {
   args: {
-    label: 'Label',
     value: '',
     placeholder: 'Enter text',
     disabled: false,
@@ -27,7 +26,6 @@ export const Default: Story = {
 
 export const WithValue: Story = {
   args: {
-    label: 'Label',
     value: 'Initial value',
     placeholder: 'Enter text here...',
     disabled: false,
@@ -36,7 +34,6 @@ export const WithValue: Story = {
 
 export const Disabled: Story = {
   args: {
-    label: 'Label',
     value: '',
     placeholder: 'Disabled input',
     disabled: true,
