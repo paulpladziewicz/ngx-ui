@@ -1,8 +1,10 @@
 <input
+  [id]="id"
   type="text"
+  class="input"
   [value]="value"
   [placeholder]="placeholder"
   [disabled]="disabled"
-  (input)="onInputChange($event)"
-  class="input"
+  (input)="value = $any($event.target).value"
+  (blur)="onTouched()"
 />
