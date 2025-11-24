@@ -5,6 +5,8 @@ import {
   EventEmitter,
   forwardRef,
   ChangeDetectionStrategy,
+  signal,
+  HostListener,
 } from '@angular/core';
 import { InputComponent } from '../input/input.component';
 import { CommonModule } from '@angular/common';
@@ -30,43 +32,19 @@ import {
   styleUrls: ['./text-input.component.scss'],
 })
 export class TextInputComponent implements ControlValueAccessor {
-  private static nextId = 0;
-  @Input() id = `ngx-text-input-${TextInputComponent.nextId++}`;
-  @Input() label: string = '';
-  @Input() placeholder: string = 'Enter text';
-  @Input() disabled: boolean = false;
+  value = signal('');
+  disabled = signal(false);
   @Output() valueChange = new EventEmitter<string>();
-  private _value = '';
 
-  get value(): string {
-    return this._value;
+
+  updateValue(value: string) {
+    this.value.set(value);
+    this.onChange(value);
+    this.valueChange.emit(value);
   }
 
-  set value(v: string) {
-    if (v !== this._value) {
-      this._value = v; // ← assign here
-      this.onChange(v);
-      this.valueChange.emit(v);
-    }
-  }
-
-  onChange = (_: any) => {};
-
-  onTouched = () => {};
-
-  writeValue(value: string): void {
-    this._value = value ?? '';
-  }
-
-  registerOnChange(fn: any): void {
-    this.onChange = fn;
-  }
-
-  registerOnTouched(fn: any): void {
-    this.onTouched = fn;
-  }
-
-  setDisabledState(isDisabled: boolean): void {
-    this.disabled = isDisabled;
+  @HostListener('input', ['$event.target.value'])
+  handleInput(v: string) {
+    this.updateValue(v);
   }
 }
