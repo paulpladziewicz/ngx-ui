@@ -6,11 +6,11 @@ import {
   ChangeDetectionStrategy,
   HostBinding,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'ngx-button',
-  imports: [CommonModule],
+  imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],

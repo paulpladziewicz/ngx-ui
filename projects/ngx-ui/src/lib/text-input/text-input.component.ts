@@ -9,7 +9,7 @@ import {
   HostListener,
 } from '@angular/core';
 import { InputComponent } from '../input/input.component';
-import { CommonModule } from '@angular/common';
+
 import {
   FormsModule,
   ReactiveFormsModule,
@@ -19,7 +19,7 @@ import {
 
 @Component({
   selector: 'ngx-text-input',
-  imports: [InputComponent, CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [InputComponent, FormsModule, ReactiveFormsModule],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
